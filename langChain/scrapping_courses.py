@@ -34,10 +34,8 @@ def get_course_details(course_url):
         lessons = [lesson.get_text(strip=True) for lesson in lesson_tag]
 
         # curriculum
-        chapters_with_lessons.append({
-           'chapter-title' : chapter_title,
-           'lessons' : lessons
-        })
+        chapters_with_lessons.append(chapter_title)
+        chapters_with_lessons.append(lessons)
 
     return ({
         'title' : title,
